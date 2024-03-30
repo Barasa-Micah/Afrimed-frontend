@@ -1,6 +1,9 @@
 import React from 'react'
+import 
+{ BsGrid1X2Fill, BsMenuButtonWideFill}
+ from 'react-icons/bs'
  import { FaUserMd, FaUser, FaGraduationCap, FaCheck, FaFileMedical} from 'react-icons/fa';
- import { BiCalendarEvent, BiDashboard} from 'react-icons/bi';
+ import { BiCalendarEvent } from 'react-icons/bi';
  
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
@@ -16,7 +19,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BiDashboard className='icon'/> Dashboard
+                    <BsGrid1X2Fill className='icon'/> Dashboard
                 </a>
             </li>
             <li className='sidebar-list-item'>
@@ -41,7 +44,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <FaFileMedical className='icon'/>Medical Lab Reports
+                    <BsMenuButtonWideFill className='icon'/>Medical Lab Reports
                 </a>
             </li>
         </ul>
