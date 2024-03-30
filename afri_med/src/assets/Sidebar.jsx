@@ -1,52 +1,47 @@
 import React from 'react'
-import {BsCart3, BsGrid1X2Fill, BsFillArchiveFill,BsFillGrid3X3GapFill, BsPeopleFill,
-BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
- from 'react-icons/bs'
+ import { FaUserMd, FaUser, FaGraduationCap, FaCheck, FaFileMedical} from 'react-icons/fa';
+ import { BiCalendarEvent, BiDashboard} from 'react-icons/bi';
+ 
 
-
-const Sidebar = () => {
+function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
-    <aside id='sidebar'>
+    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand'>
-                <BsCart3 className='icon-header' />  Dashboard
+                <FaUserMd className='icon_header'/> AFRIMED
             </div>
-            <span className='icon close_icon'>X</span>
+            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
+
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
                 <a href="">
-                    < BsGrid1X2Fill className='icon' />Patient Details
+                    <BiDashboard className='icon'/> Dashboard
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    < BsFillArchiveFill className='icon' /> Medical Records
+                    <BiCalendarEvent  className='icon'/> Appointments
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsFillGrid3X3GapFill className='icon' /> Appointments
+                    <FaUser className='icon'/> Patient Details
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsPeopleFill className='icon' /> Lab Results
+                    <FaGraduationCap className='icon'/> Education & Resources
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsListCheck className='icon' />Education & Resources
+                    <FaCheck className='icon'/> Gamification
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsMenuButtonWideFill className='icon' /> Gamification
-                </a>
-            </li>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    < BsFillGearFill className='icon' /> Settings
+                    <FaFileMedical className='icon'/>Medical Lab Reports
                 </a>
             </li>
         </ul>
